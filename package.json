@@ -4,7 +4,8 @@
   "description": "firs game using Phaser3, Nodejs and HTML5",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "dev": "webpack-dev-server --mode development",
+    "start": "node server.js",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\""
   },
