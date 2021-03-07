@@ -21,7 +21,7 @@ class Game extends Phaser.Scene {
       spacing: 2
     });
     //loadin the cloud tiles image
-    this.load.spritesheet('clouds-sheet', 'assets/tilesets/clouds.png', {
+    this.load.spritesheet('clouds-sheet', 'assets/tilesets/Clouds.png', {
       frameWidth: 32,
       frameHeight: 32,
       margin: 1,
@@ -142,6 +142,12 @@ class Game extends Phaser.Scene {
       spikesCollider.destroy();
       this.hero.body.setCollideWorldBounds(false);
       this.cameras.main.stopFollow();
+
+      //creating game over texts
+      let cameraViewPointX = this.cameras.main.getWorldPoint(this.cameras.main.width, this.cameras.main.height).x;
+      this.gameOverText = this.add.text(cameraViewPointX-240, 260, 'Game Over!!!\nPress Space key\nto restart Game', { fontSize: '32px', fill: 'White', align: 'center', fontFamily: 'Anton', stroke: 'black', strokeThickness: 8});
+      this.gameOverText.setOrigin(0.5);
+      this.gameOverText.visible = true;
     });
   }
 
@@ -193,9 +199,9 @@ class Game extends Phaser.Scene {
 
   update(time, delta) {
     const cameraBottom = this.cameras.main.getWorldPoint(0, this.cameras.main.height).y;
-
-    if(this.hero.isDead() && this.hero.getBounds().top > cameraBottom + 100) {
+    if(this.hero.isDead() && this.hero.getBounds().top > cameraBottom + 100 && this.cursorKeys.space.isDown) {
       this.hero.destroy();
+      this.gameOverText.visible = false;
       this.addHero();
     }
   }
