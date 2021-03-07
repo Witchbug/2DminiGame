@@ -21,7 +21,12 @@ class Game extends Phaser.Scene {
       spacing: 2
     });
     //loadin the cloud tiles image
-    this.load.image('clouds-sheet', 'assets/tilesets/clouds.png');
+    this.load.spritesheet('clouds-sheet', 'assets/tilesets/clouds.png', {
+      frameWidth: 32,
+      frameHeight: 32,
+      margin: 1,
+      spacing: 2
+    });
 
     this.load.spritesheet('hero-run-sheet','assets/hero/run.png', {
       frameWidth: 32,
