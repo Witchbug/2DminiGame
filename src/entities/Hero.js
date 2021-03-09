@@ -52,7 +52,7 @@ class Hero extends Phaser.GameObjects.Sprite {
             methods: {
                 onEnterState: (lifecycle) => {
                     this.anims.play('hero-' + lifecycle.to);
-                    console.log(lifecycle);   
+                    // console.log(lifecycle);   
                 },
             }
         });
@@ -94,9 +94,11 @@ class Hero extends Phaser.GameObjects.Sprite {
             methods: {
                 onJump: () => {
                     this.body.setVelocityY(-400);
+                    this.emit('jumped');
                 },
                 onFlip: () => {
                     this.body.setVelocityY(-300);
+                    this.emit('doubleJumped');
                 },
                 onDie: () => {
                     this.body.setVelocity(0, -500);

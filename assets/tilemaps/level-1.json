@@ -68,6 +68,53 @@
         }, 
         {
          "draworder":"topdown",
+         "id":6,
+         "name":"Foods",
+         "objects":[
+                {
+                 "gid":185,
+                 "height":32,
+                 "id":22,
+                 "name":"",
+                 "rotation":0,
+                 "type":"food",
+                 "visible":true,
+                 "width":32,
+                 "x":191,
+                 "y":288
+                }, 
+                {
+                 "gid":185,
+                 "height":32,
+                 "id":23,
+                 "name":"",
+                 "rotation":0,
+                 "type":"food",
+                 "visible":true,
+                 "width":32,
+                 "x":320,
+                 "y":288
+                }, 
+                {
+                 "gid":185,
+                 "height":32,
+                 "id":24,
+                 "name":"",
+                 "rotation":0,
+                 "type":"food",
+                 "visible":true,
+                 "width":32,
+                 "x":448,
+                 "y":64
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":5,
          "name":"Objects",
          "objects":[
@@ -244,9 +291,32 @@
          "visible":true,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":7,
+         "name":"Princess",
+         "objects":[
+                {
+                 "gid":190,
+                 "height":46,
+                 "id":27,
+                 "name":"tanjin",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":1563,
+                 "y":417
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":6,
- "nextobjectid":15,
+ "nextlayerid":8,
+ "nextobjectid":28,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",
@@ -276,6 +346,32 @@
          "spacing":0,
          "tilecount":175,
          "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":5,
+         "firstgid":185,
+         "image":"..\/hero\/food.png",
+         "imageheight":32,
+         "imagewidth":160,
+         "margin":0,
+         "name":"foods",
+         "spacing":0,
+         "tilecount":5,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":1,
+         "firstgid":190,
+         "image":"..\/hero\/princess.png",
+         "imageheight":46,
+         "imagewidth":32,
+         "margin":0,
+         "name":"princess",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":46,
          "tilewidth":32
         }],
  "tilewidth":32,
