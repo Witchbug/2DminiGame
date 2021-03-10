@@ -74,7 +74,7 @@ class Game extends Phaser.Scene {
     this.load.audio('doubleJump', 'assets/audio/doubleJump.mp3');
     this.load.audio('food', 'assets/audio/food.mp3');
     this.load.audio('dead', 'assets/audio/dead.mp3');
-    this.load.audio('game', 'assets/audio/game.mp3');
+    this.load.audio('game', 'assets/audio/game2.mp3');
     this.load.audio('clap', 'assets/audio/clap.mp3');
 
   }
@@ -88,8 +88,8 @@ class Game extends Phaser.Scene {
     this.doubleJumpSound = this.sound.add('doubleJump', { loop: false,  volume: 0.1 });
     this.foodSound = this.sound.add('food', { loop: false,  volume: 0.1 });
     this.deadSound = this.sound.add('dead', { loop: false,  volume: 0.1 });
-    this.clapSound = this.sound.add('clap', { loop: false,  volume: 0.01});
-    this.gameSound = this.sound.add('game', { loop: true,  volume: 0.05});
+    this.clapSound = this.sound.add('clap', { loop: false,  volume: 0.1});
+    this.gameSound = this.sound.add('game', { loop: true,  volume: 0.25});
     
     // create animation 
     this.anims.create({
